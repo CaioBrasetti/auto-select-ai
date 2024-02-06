@@ -19,8 +19,14 @@ class SearchesController < ApplicationController
     chaptgpt_response = client.chat(parameters:
       {
         model: "gpt-3.5-turbo",
-        messages: [{ role: "user", content: "me fale sobre a marca #{@search} 2 linhas no maximo"}]
-      })
+        messages: [
+          {
+            role: "user",
+            content: "Conte a história da marca #{@search}. 10 linhas no maximo"
+          }
+        ]
+      }
+    )
     @content = chaptgpt_response["choices"][0]["message"]["content"]
   end
 
