@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'searches#index'
+  get '/searches/:id', to: 'searches#show', as: 'show'
   post 'create_prompt', to: 'searches#create_prompt', as: 'create_prompt'
   # root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
