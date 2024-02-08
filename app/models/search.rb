@@ -4,7 +4,7 @@ class Search < ApplicationRecord
     client = OpenAI::Client.new
     chaptgpt_response = client.chat(parameters: {
       model: "gpt-3.5-turbo",
-      messages: [{ role: "user", content: "Me fale um carro da marca #{text}."}]
+      messages: [{ role: "user", content: "Me fale um carro de cada marca, sendo elas: #{text}."}]
     })
     return chaptgpt_response["choices"][0]["message"]["content"]
     end
