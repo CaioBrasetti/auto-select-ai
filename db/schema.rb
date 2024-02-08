@@ -15,8 +15,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_153812) do
   enable_extension "plpgsql"
 
   create_table "searches", force: :cascade do |t|
-    t.string "text"
+    t.string "body1"
+    t.string "transmission2"
+    t.string "engine3"
+    t.string "traction4"
+    t.string "optionals5"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 end
