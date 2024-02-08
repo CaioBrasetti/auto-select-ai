@@ -4,7 +4,11 @@
   <%= simple_form_for @search, url: create_prompt_path do |f| %>
 
     <div class="form-inputs">
-      <%= f.collection_check_boxes :text, [['Audi', 'Audi'], ['Ford', 'Ford'], ['BMW', 'BMW']], :last, :first, include_hidden: false, checked: @search.text.present? ? @search.text.split(',') : [] %>
+      <%= f.collection_check_boxes :optionals5, [['Audi5', 'Audi5'], ['Ford5', 'Ford5'], ['BMW5', 'BMW5']], :last, :first, include_hidden: false, checked: @search.optionals5.present? ? @search.optionals5.split(',') : [] %>
+    </div>
+
+    <div class="form-inputs">
+      <%= f.collection_radio_buttons :body1, [['Audi1', 'Audi1'], ['Ford1', 'Ford1'], ['BMW1', 'BMW1']], :last, :first %>
     </div>
 
     <div class="form-actions btn btn-success">
@@ -14,7 +18,7 @@
     <h2>Mensagens Criadas:</h2>
     <ul>
       <% @searches.each do |search| %>
-        <li><%= search.text %></li>
+        <li><%= search.optionals5 %></li>
       <% end %>
     </ul>
   <% end %>
