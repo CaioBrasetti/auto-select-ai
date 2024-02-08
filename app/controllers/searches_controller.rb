@@ -5,7 +5,8 @@ class SearchesController < ApplicationController
   end
 
   def create_prompt
-    @search = Search.new(search_params)
+    converted_variable_to_string = search_params[:text].join(', ')
+    @search = Search.new(converted_variable_to_string)
     if @search.save
       redirect_to show_path(@search.id), notice: 'Criado com sucesso.'
     else
@@ -22,6 +23,6 @@ class SearchesController < ApplicationController
   private
 
   def search_params
-    params.require(:search).permit(:text)
+    params.require(:search).permit(:text => [])
   end
 end
