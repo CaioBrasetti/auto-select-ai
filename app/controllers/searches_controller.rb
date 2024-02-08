@@ -15,19 +15,8 @@ class SearchesController < ApplicationController
   end
 
   def show
-    client = OpenAI::Client.new
-    chaptgpt_response = client.chat(parameters:
-      {
-        model: "gpt-3.5-turbo",
-        messages: [
-          {
-            role: "user",
-            content: "Conte a história da marca #{@search}. 10 linhas no maximo"
-          }
-        ]
-      }
-    )
-    @content = chaptgpt_response["choices"][0]["message"]["content"]
+    search = Search.find(params[:id])
+    @content = Search.new.content(search.text)
   end
 
   private
