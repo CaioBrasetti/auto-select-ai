@@ -3,18 +3,19 @@
 
   <%= simple_form_for @search, url: create_prompt_path do |f| %>
 
-  <div class="form-inputs">
-    <%= f.input :text, label: 'Digite uma prompt' %>
-  </div>
+    <div class="form-inputs">
+      <%= f.collection_radio_buttons :text, [['Audi', 'Audi'], ['Ford', 'Ford'], ['BMW', 'BMW']], :first, :last %>
+    </div>
 
-  <div class="form-actions btn btn-success">
-    <%= f.button :submit %>
-  </div>
+    <div class="form-actions btn btn-success">
+      <%= f.button :submit %>
+    </div>
 
-  <h2>Mensagens Criadas:</h2>
-  <ul>
-    <% @searches.each do |search| %>
-      <li><%= search.text %></li>
-    <% end %>
-  </ul>
-<% end %>
+    <h2>Mensagens Criadas:</h2>
+    <ul>
+      <% @searches.each do |search| %>
+        <li><%= search.text %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
