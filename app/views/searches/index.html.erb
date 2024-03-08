@@ -1,13 +1,12 @@
 <div class="container text-center mt-3">
   <h1>Faça sua pesquisa</h1>
-
   <%= form_for :search, url: create_prompt_path, method: :post do |f| %>
+    <%# CARROCERIA \/ %>
     <fieldset class="checkbox-group">
-      <legend class="checkbox-group-legend">Carrocerias</legend>
-
+      <legend class="checkbox-group-legend">Carroceria</legend>
       <div class="checkbox">
         <label class="checkbox-wrapper">
-          <%= f.radio_button :body1, "Sedan", class: "checkbox-input" %>
+          <%= f.radio_button :body1, "Sedã", class: "checkbox-input" %>
           <span class="checkbox-tile">
             <span class="checkbox-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
@@ -15,11 +14,10 @@
                 <polygon points="56 100 56 168 128 236 128 168 200 168 56 32 200 32 200 100 56 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></polygon>
               </svg>
             </span>
-            <span class="checkbox-label">Sedan</span>
+            <span class="checkbox-label">Sedã</span>
           </span>
         </label>
       </div>
-
       <div class="checkbox">
         <label class="checkbox-wrapper">
           <%= f.radio_button :body1, "Hatch", class: "checkbox-input" %>
@@ -34,42 +32,153 @@
           </span>
         </label>
       </div>
+      <div class="checkbox">
+        <label class="checkbox-wrapper">
+          <%= f.radio_button :body1, "Picape", class: "checkbox-input" %>
+          <span class="checkbox-tile">
+            <span class="checkbox-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"></rect>
+                <polygon points="56 100 56 168 128 236 128 168 200 168 56 32 200 32 200 100 56 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></polygon>
+              </svg>
+            </span>
+            <span class="checkbox-label">Picape</span>
+          </span>
+        </label>
+      </div>
+      <div class="checkbox">
+        <label class="checkbox-wrapper">
+          <%= f.radio_button :body1, "SUV", class: "checkbox-input" %>
+          <span class="checkbox-tile">
+            <span class="checkbox-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"></rect>
+                <polygon points="56 100 56 168 128 236 128 168 200 168 56 32 200 32 200 100 56 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></polygon>
+              </svg>
+            </span>
+            <span class="checkbox-label">SUV</span>
+          </span>
+        </label>
+      </div>
+      <div class="checkbox">
+        <label class="checkbox-wrapper">
+          <%= f.radio_button :body1, "Perua", class: "checkbox-input" %>
+          <span class="checkbox-tile">
+            <span class="checkbox-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"></rect>
+                <polygon points="56 100 56 168 128 236 128 168 200 168 56 32 200 32 200 100 56 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></polygon>
+              </svg>
+            </span>
+            <span class="checkbox-label">Perua</span>
+          </span>
+        </label>
+      </div>
+      <div class="checkbox">
+        <label class="checkbox-wrapper">
+          <%= f.radio_button :body1, "Cupê", class: "checkbox-input" %>
+          <span class="checkbox-tile">
+            <span class="checkbox-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"></rect>
+                <polygon points="56 100 56 168 128 236 128 168 200 168 56 32 200 32 200 100 56 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></polygon>
+              </svg>
+            </span>
+            <span class="checkbox-label">Cupê</span>
+          </span>
+        </label>
+      </div>
+      <div class="checkbox">
+        <label class="checkbox-wrapper">
+          <%= f.radio_button :body1, "Conversível", class: "checkbox-input" %>
+          <span class="checkbox-tile">
+            <span class="checkbox-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="none" viewBox="0 0 24 24" style="vertical-align: middle; text-align: center;">
+                <rect width="256" height="256" fill="none"></rect>
+                <path d="m16 6l-1 .75L17.5 10h-4V8.5H12V10H3c-1.11 0-2 .89-2 2v3h2a3 3 0 0 0 3 3a3 3 0 0 0 3-3h6a3 3 0 0 0 3 3a3 3 0 0 0 3-3h2v-3c0-1.11-.89-2-2-2h-2zM6
+                  13.5A1.5 1.5 0 0 1 7.5 15A1.5 1.5 0 0 1 6 16.5A1.5 1.5 0 0 1 4.5 15A1.5 1.5 0 0 1 6 13.5m12 0a1.5 1.5 0 0 1 1.5 1.5a1.5 1.5 0 0 1-1.5 1.5a1.5 1.5 0 0
+                  1-1.5-1.5a1.5 1.5 0 0 1 1.5-1.5" fill="currentColor"></path>
+              </svg>
+            </span>
+            <span class="checkbox-label">Conversível</span>
+          </span>
+        </label>
+      </div>
+    </fieldset>
+    <%# TRANSMISSÃO \/ %>
+    <fieldset class="checkbox-group">
+      <legend class="checkbox-group-legend">Transmissão</legend>
+      <div class="checkbox">
+        <label class="checkbox-wrapper">
+          <%= f.radio_button :transmission2, "Manual", class: "checkbox-input" %>
+          <span class="checkbox-tile">
+            <span class="checkbox-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="none" viewBox="0 0 24 24" style="vertical-align: middle; text-align: center;">
+                <rect width="256" height="256" fill="none"></rect>
+                <path d="m16 6l-1 .75L17.5 10h-4V8.5H12V10H3c-1.11 0-2 .89-2 2v3h2a3 3 0 0 0 3 3a3 3 0 0 0 3-3h6a3 3 0 0 0 3 3a3 3 0 0 0 3-3h2v-3c0-1.11-.89-2-2-2h-2zM6
+                  13.5A1.5 1.5 0 0 1 7.5 15A1.5 1.5 0 0 1 6 16.5A1.5 1.5 0 0 1 4.5 15A1.5 1.5 0 0 1 6 13.5m12 0a1.5 1.5 0 0 1 1.5 1.5a1.5 1.5 0 0 1-1.5 1.5a1.5 1.5 0 0
+                  1-1.5-1.5a1.5 1.5 0 0 1 1.5-1.5" fill="currentColor"></path>
+              </svg>
+            </span>
+            <span class="checkbox-label">Manual</span>
+          </span>
+        </label>
+      </div>
 
+      <div class="checkbox">
+        <label class="checkbox-wrapper">
+          <%= f.radio_button :transmission2, "Automática", class: "checkbox-input" %>
+          <span class="checkbox-tile">
+            <span class="checkbox-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="none" viewBox="0 0 24 24" style="vertical-align: middle; text-align: center;">
+                <rect width="256" height="256" fill="none"></rect>
+                <path d="m16 6l-1 .75L17.5 10h-4V8.5H12V10H3c-1.11 0-2 .89-2 2v3h2a3 3 0 0 0 3 3a3 3 0 0 0 3-3h6a3 3 0 0 0 3 3a3 3 0 0 0 3-3h2v-3c0-1.11-.89-2-2-2h-2zM6
+                  13.5A1.5 1.5 0 0 1 7.5 15A1.5 1.5 0 0 1 6 16.5A1.5 1.5 0 0 1 4.5 15A1.5 1.5 0 0 1 6 13.5m12 0a1.5 1.5 0 0 1 1.5 1.5a1.5 1.5 0 0 1-1.5 1.5a1.5 1.5 0 0
+                  1-1.5-1.5a1.5 1.5 0 0 1 1.5-1.5" fill="currentColor"></path>
+              </svg>
+            </span>
+            <span class="checkbox-label">Automática</span>
+          </span>
+        </label>
+      </div>
 
+      <div class="checkbox">
+        <label class="checkbox-wrapper">
+          <%= f.radio_button :transmission2, "Automatizado", class: "checkbox-input" %>
+          <span class="checkbox-tile">
+            <span class="checkbox-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="none" viewBox="0 0 24 24" style="vertical-align: middle; text-align: center;">
+                <rect width="256" height="256" fill="none"></rect>
+                <path d="m16 6l-1 .75L17.5 10h-4V8.5H12V10H3c-1.11 0-2 .89-2 2v3h2a3 3 0 0 0 3 3a3 3 0 0 0 3-3h6a3 3 0 0 0 3 3a3 3 0 0 0 3-3h2v-3c0-1.11-.89-2-2-2h-2zM6
+                  13.5A1.5 1.5 0 0 1 7.5 15A1.5 1.5 0 0 1 6 16.5A1.5 1.5 0 0 1 4.5 15A1.5 1.5 0 0 1 6 13.5m12 0a1.5 1.5 0 0 1 1.5 1.5a1.5 1.5 0 0 1-1.5 1.5a1.5 1.5 0 0
+                  1-1.5-1.5a1.5 1.5 0 0 1 1.5-1.5" fill="currentColor"></path>
+              </svg>
+            </span>
+            <span class="checkbox-label">Automatizado</span>
+          </span>
+        </label>
+      </div>
 
+      <div class="checkbox">
+        <label class="checkbox-wrapper">
+          <%= f.radio_button :transmission2, "CVT", class: "checkbox-input" %>
+          <span class="checkbox-tile">
+            <span class="checkbox-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="none" viewBox="0 0 24 24" style="vertical-align: middle; text-align: center;">
+                <rect width="256" height="256" fill="none"></rect>
+                <path d="m16 6l-1 .75L17.5 10h-4V8.5H12V10H3c-1.11 0-2 .89-2 2v3h2a3 3 0 0 0 3 3a3 3 0 0 0 3-3h6a3 3 0 0 0 3 3a3 3 0 0 0 3-3h2v-3c0-1.11-.89-2-2-2h-2zM6
+                  13.5A1.5 1.5 0 0 1 7.5 15A1.5 1.5 0 0 1 6 16.5A1.5 1.5 0 0 1 4.5 15A1.5 1.5 0 0 1 6 13.5m12 0a1.5 1.5 0 0 1 1.5 1.5a1.5 1.5 0 0 1-1.5 1.5a1.5 1.5 0 0
+                  1-1.5-1.5a1.5 1.5 0 0 1 1.5-1.5" fill="currentColor"></path>
+              </svg>
+            </span>
+            <span class="checkbox-label">CVT</span>
+          </span>
+        </label>
+      </div>
     </fieldset>
     <%= f.submit "Submit" %>
   <% end %>
 
-
-
-
-
-
-
-  <div class="form-inputs">
-    <label>
-      <input type="radio" name="search[body1]" value="Sedan"> Sedan
-    </label>
-    <label>
-      <input type="radio" name="search[body1]" value="Ford1"> Ford1
-    </label>
-    <label>
-      <input type="radio" name="search[body1]" value="BMW1"> BMW1
-    </label>
-  </div>
-
-  <div class="form-inputs">
-    <label>
-      <input type="radio" name="search[transmission2]" value="Automatico"> Automatico
-    </label>
-    <label>
-      <input type="radio" name="search[transmission2]" value="Ford1"> Ford1
-    </label>
-    <label>
-      <input type="radio" name="search[transmission2]" value="BMW1"> BMW1
-    </label>
-  </div>
 
   <div class="form-inputs">
     <label>
@@ -107,13 +216,11 @@
     </label>
   </div>
 
-  <input type="submit" value="Submit">
-<%# </form> %>
 
-    <h2>Mensagens Criadas:</h2>
-    <ul>
-      <% @searches.each do |search| %>
-        <li><%= search.optionals5 %></li>
-      <% end %>
-    </ul>
+    <%# <h2>Mensagens Criadas:</h2> %>
+    <%# <ul> %>
+      <%# <% @searches.each do |search| %>
+        <%# <li><%= search.optionals5 %>
+      <%# <% end %>
+    <%# </ul> %>
 </div>
